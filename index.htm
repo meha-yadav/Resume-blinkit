@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Meha Yadav</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://db.onlinewebfonts.com/c/917a69d24b88e2d4d2ca803c0605bd59?family=Cera+PRO+Regular" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <b><span class="one">blink</span><span class="two">it</span></b><span class="three">Meha Yadav</span>
+        <br>
+        <br>
+        <span id='text'></span>
+        <div class='console-underscore' id='console'></div>
+        <script>
+            // Function to create console text animation
+            function consoleText(words, id, colors) {
+                if (colors === undefined) colors = ['#fff'];
+                var visible = true;
+                var con = document.getElementById('console');
+                var letterCount = 1;
+                var x = 1;
+                var waiting = false;
+                var target = document.getElementById(id);
+                target.setAttribute('style', 'color:' + colors[0]);
+    
+                window.setInterval(function () {
+                    if (letterCount === 0 && waiting === false) {
+                        waiting = true;
+                        target.innerHTML = words[0].substring(0, letterCount);
+                        window.setTimeout(function () {
+                            var usedColor = colors.shift();
+                            colors.push(usedColor);
+                            var usedWord = words.shift();
+                            words.push(usedWord);
+                            x = 1;
+                            target.setAttribute('style', 'color:' + colors[0]);
+                            letterCount += x;
+                            waiting = false;
+                        }, 1000);
+                    } else if (letterCount === words[0].length + 1 && waiting === false) {
+                        waiting = true;
+                        window.setTimeout(function () {
+                            x = -1;
+                            letterCount += x;
+                            waiting = false;
+                        }, 1000);
+                    } else if (waiting === false) {
+                        target.innerHTML = words[0].substring(0, letterCount);
+                        letterCount += x;
+                    }
+                }, 120);
+    
+                window.setInterval(function () {
+                    if (visible === true) {
+                        con.className = 'console-underscore hidden';
+                        visible = false;
+                    } else {
+                        con.className = 'console-underscore';
+                        visible = true;
+                    }
+                }, 400);
+            }
+    
+            // Start the console text animation
+            consoleText(['India &#39;s last minute app '], 'text', ['black']);
+        </script>
+    </div>
+    <div class="content1">
+        <div class="left1">
+            <span class="four"><b>About Me</b></span>
+            <br>
+            <br>
+            <span class="aboutme">Hi! <br>
+                My name is Meha Yadav. I am a third year student pursuing Computer Science Honors from Indraprastha College for Women, Delhi University. Along with this, as I am passionate about mathematics, I am pursuing Actuarial Science. In my free time I like to gush about Gossip Girl and watch info-tainment videos with my cat. I am looking forward to working as a business analyst or a software developer one day.  </span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <span class="four"><b>My Work Experience</b></span>
+            <br>
+            <br>
+            <span class="workex"><b>Research Intern</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="companies">Jun’ 2024 - Aug' 2024<br> FXIII Technologies Pvt. Ltd.</i></span>
+            <ul class="ex1">
+                <li>Working directly with the Union Ministry on Data Analysis and Reporting</li>
+                <li>Analysed 500,000+ data points to administer in strategic decision-making</li>
+                <li>Using Meltwater for data interpretation and preparing daily, weekly and monthly analytics reports</li>
+            </ul>
+            <br>
+            <span class="workex"><b>National Research & Development Head</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="companies">Oct’ 2023 - Jun' 2024<br>Youth India Foundation</i></span>
+            <ul class="ex1">
+                <li>Co-founded Youth India Network and Youth India Production House for business expansion, awareness, and engagement</li>
+                <li>Led a team of 12 members conducting research & surveys formulating the basis of segments above
+                </li>
+                <li>Spearheaded transition of analytics from Excel to Power BI leading to technological alignment with the
+                market trends</li>
+            </ul>
+            <br>
+            <span class="workex"><b>Graphic Design Intern </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="companies">Feb’ 2024 - May' 2024 <br> Dharmakit Networks</i></span>
+            <ul class="ex1">
+                <li>Designed website, graphics, and brochures for promotions resulting in increased social media engagement</li>
+                <li>Managed LinkedIn account through scheduled posts, monitoring trends, and responding to comments
+                </li>
+            </ul>
+            <br>
+            <br>
+            <br>
+            <span class="four"><img class="qr" src="qrcode_128805296_15a06644beda5b87912b768566d52a3e.jpg"></span>
+            <br>
+            <span class="ex2"><a href="https://docs.google.com/document/d/19J3gQm1iJk4IgR-YV3N00GA_bcRj18t-/edit?usp=sharing&ouid=102282090604093942128&rtpof=true&sd=true"><i>&#40;Link to my Formal Resume&#41; </i></a></span>
+
+        </div>
+        <div class="right1">
+            <span class="four"><b>My Skills</b></span><br><br>
+            <span class="skills">My technical skills include:<br>
+                <ul class="list">
+                    <li>C++</li>
+                    <li>Python &#40; including NumPy, Pandas, Matplotlib, etc. &#41; </li>
+                    <li>Web Development &#40; HTML, CSS, Js &#41;</li>
+                    <li>SQL/DBMS</li>
+                    <li>Graphic Designing &#40; Canva, Figma &#41;</li>
+                    <li>PowerBI</li>
+                    <li>Microsoft Office</li>
+                </ul>
+            </span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <span class="four"><b>My Extracirriculars</b></span>
+            <br>
+            <br>
+            <span class="skills">I served as:<br>
+                <ul class="list">
+                    <li><b>Student Coordinator</b> <i>&#40;2023-present&#41;</i> </li>
+                    <li><b>Event Organizing Coordinator - Dept. of Computer Science </b><i> &#40;2023-24&#41;</i> </li>
+                    <li><b>Joint Secretary - Dept. of Computer Science </b><i>&#40;2022-23&#41;</i> </li>
+                    <li><b>Class Representative</b> <i> &#40;2022-24&#41; </i></li>
+                </ul>
+            </span>
+            <br>
+            <br>
+            <span class="four"><img class="photo" src="WhatsApp Image 2024-10-03 at 6.07.46 PM.jpeg"></span>
+            <br>
+            <br>
+        </div>
+    </div>
+    <br>
+    <br><br>
+    <br><br><br>
+    <div class="footer">
+        <br>
+        <br>
+
+        <span class="contact"> Contact Me : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope">&nbsp;meha272004@gmail.com</i>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<i class="fa fa-linkedin-square">&nbsp;<a href="https://www.linkedin.com/in/meha-yadav-1402b9263/">Meha Yadav</a></i>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;<i class="fa fa-phone">&nbsp;+91 9811072535</i>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;<i class="fa fa-github">&nbsp;<a href="https://github.com/meha-yadav">meha-yadav</a></i></span>
+
+    </div>
+</body>
+</html>
